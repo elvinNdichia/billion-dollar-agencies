@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+#root {
+}
+
+.iphone-bg {
+  background: radial-gradient(
+    209.14% 104.17% at 50% 104.17%,
+    #000005 0%,
+    #1c0864 29.17%,
+    #9136c3 65.62%,
+    #e894f1 94.78%
+  );
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Ubuntu;
+}
