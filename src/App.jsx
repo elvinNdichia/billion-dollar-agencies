@@ -9,13 +9,14 @@ import { PageScroll } from "./components/PageScroll";
 import { IntermediateParallax, SimpleParallax } from "./components/Parallax";
 import { AdvancedParallaxGPt } from "./components/AdvancedParallaxGPt";
 import { NavAndTop } from "./components/NavAndTop";
+import { MainContainer } from "./components/MainContainer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <NavAndTop />
+      <MainContainer />
     </>
   );
 }
