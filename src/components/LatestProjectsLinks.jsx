@@ -50,6 +50,17 @@ export const LatestProjectsLinks = () => {
           </span>
         </li>
       ))}
+      <li
+        key="324089"
+        style={{
+          cursor: "pointer",
+          paddingLeft: "3.18rem",
+          marginTop: "0.1rem",
+        }}
+        className="body1"
+      >
+        <span style={{ color: "#000", opacity: 0.5 }}>More...</span>
+      </li>
 
       <motion.div
         layout
