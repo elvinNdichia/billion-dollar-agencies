@@ -8,7 +8,6 @@ export function MainContainer() {
         sx={{
           width: "100%",
           maxWidth: "98rem",
-          background: "#eee",
           padding: { sm: "0 2rem" },
         }}
       >

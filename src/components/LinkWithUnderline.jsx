@@ -9,12 +9,18 @@ export const LinkWithUnderline = ({ href, children }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
+        marginLeft: "2.5rem",
+        cursor: "pointer",
         position: "relative",
         display: "inline-block",
         overflow: "hidden",
       }}
     >
-      <a href={href} style={{ textDecoration: "none", color: "inherit" }}>
+      <a
+        href={href}
+        style={{ textDecoration: "none", color: "inherit" }}
+        className="body1"
+      >
         {children}
       </a>
       <AnimatePresence>
