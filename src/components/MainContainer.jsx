@@ -1,5 +1,7 @@
 import { Box, maxWidth } from "@mui/system";
 import { Header } from "./Header";
+import { Hero } from "./Hero";
+import { VoilaWriteAnimation } from "./VoilaWriteAnimation";
 
 export function MainContainer() {
   return (
@@ -12,6 +14,7 @@ export function MainContainer() {
         }}
       >
         <Header />
+        <Hero />
       </Box>
     </Box>
   );
