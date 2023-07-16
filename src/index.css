@@ -64,6 +64,11 @@ body {
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
+.h3 {
+  font-size: calc(100px + (27500vw - 137500px) / 1900);
+  font-weight: 800;
+  line-height: 0.9;
+}
 @media screen and (min-width: 768px) {
   .body1 {
     font-size: 1.1rem;
