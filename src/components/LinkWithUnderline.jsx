@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const LinkWithUnderline = ({ href, children }) => {
+export const LinkWithUnderline = ({ href, children, style }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (
@@ -9,11 +9,11 @@ export const LinkWithUnderline = ({ href, children }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        marginLeft: "2.5rem",
         cursor: "pointer",
         position: "relative",
         display: "inline-block",
         overflow: "hidden",
+        ...style,
       }}
     >
       <a

@@ -8,8 +8,8 @@ export function Header() {
     <Box
       sx={{
         padding: { sm: "1.8rem 0 0 0" },
-        display: "flex",
-        justifyContent: "space-between",
+        display: "grid",
+        gridTemplateColumns: "1fr 2fr",
       }}
     >
       <Box
@@ -30,23 +30,34 @@ export function Header() {
       >
         <HamburgerToggle />
       </Box>
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <div>
-          <p className="body1">Latest Projects</p>
-        </div>
-        <div
-          style={{
-            paddingTop: ".25rem",
-            position: "relative",
-          }}
-        >
-          <LatestProjectsLinks />{" "}
-        </div>
-      </Box>
-      <Box sx={{ display: { xs: "none", sm: "block" } }}>
-        <LinkWithUnderline>About</LinkWithUnderline>
-        <LinkWithUnderline>Gallery</LinkWithUnderline>
-        <LinkWithUnderline>Contact</LinkWithUnderline>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box sx={{ display: { xs: "none", sm: "block", md: "none" } }} />
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <div>
+            <p className="body1">Latest Projects</p>
+          </div>
+          <div
+            style={{
+              paddingTop: ".25rem",
+              position: "relative",
+            }}
+          >
+            <LatestProjectsLinks />{" "}
+          </div>
+        </Box>
+        <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <LinkWithUnderline style={{ marginLeft: "2.5rem" }}>
+            About
+          </LinkWithUnderline>
+
+          <LinkWithUnderline style={{ marginLeft: "2.5rem" }}>
+            Gallery
+          </LinkWithUnderline>
+
+          <LinkWithUnderline style={{ marginLeft: "2.5rem" }}>
+            Contact
+          </LinkWithUnderline>
+        </Box>
       </Box>
     </Box>
   );
