@@ -4,6 +4,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --voila-gradient: linear-gradient(
+    54deg,
+    #ec0d78 0%,
+    #fd2944 43.24%,
+    #f84e37 72.8%,
+    #fe880e 100%
+  );
+}
+
+.gradient-text {
+  background: var(--voila-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-bg {
+  background: var(--voila-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 html {
   scroll-behavior: smooth;
@@ -38,6 +58,11 @@ body {
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 500;
+}
+.h2 {
+  font-size: calc(30px + (5200vw - 26000px) / 1900);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 @media screen and (min-width: 768px) {
   .body1 {

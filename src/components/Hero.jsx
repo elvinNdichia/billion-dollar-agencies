@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
+import { H2Underline } from "./H2Underline";
 import { LinkWithUnderline } from "./LinkWithUnderline";
 
 export function Hero() {
@@ -192,6 +193,33 @@ export function Hero() {
           <br />
           <LinkWithUnderline>Twitter</LinkWithUnderline>
           <br /> <LinkWithUnderline>Dribbble</LinkWithUnderline>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "1fr 2fr" },
+          padding: {
+            xs: "0 1rem",
+            lg: "3rem 0 0 0",
+          },
+        }}
+      >
+        <Box></Box>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "5fr 1fr", md: "", lg: "5fr 1fr" },
+          }}
+        >
+          <Box className="gradient-bg" sx={{ paddingTop: { xs: "2rem" } }}>
+            <h2 className="gradient-text h2">
+              We use Strategy, Branding, Digital Design Messaging & Technologies
+              to delight your audience. Our clients are rethinking industries
+              like Healthcare, Finance, Software, Web Services, and many more.
+            </h2>
+          </Box>
+          <Box></Box>
         </Box>
       </Box>
     </>
