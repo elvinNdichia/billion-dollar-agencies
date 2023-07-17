@@ -2,6 +2,7 @@ import { Box, maxWidth } from "@mui/system";
 import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { LatestProjects } from "./LatestProjects";
+import { Footer } from "./Footer";
 
 export function MainContainer() {
   return (
@@ -16,6 +17,7 @@ export function MainContainer() {
         <Header />
         <Hero />
         <LatestProjects />
+        <Footer />
       </Box>
     </Box>
   );

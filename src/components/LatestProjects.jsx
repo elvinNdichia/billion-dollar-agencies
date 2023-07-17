@@ -46,8 +46,6 @@ export function LatestProjects() {
         <ExpandingProject title="56k Cloud" src="/56k.jpg" />
         <ExpandingProject title="Daml" src="/daml.jpg" />
       </Box>
-
-      <div style={{ height: "2000px" }} />
     </Box>
   );
 }
@@ -63,7 +61,7 @@ function ExpandingProject({ title, src }) {
   const width = useTransform(
     scrollYProgress,
     [0, 1],
-    [title === "Daml" ? "45%" : "65%", "65%"]
+    [title === "Daml" ? "40%" : "65%", "65%"]
   );
   return (
     <Box sx={{ display: "flex", marginBottom: "56px", cursor: "pointer" }}>
