@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { LatestProjects } from "./LatestProjects";
 import { Footer } from "./Footer";
+import { Top } from "./Top";
 
 export function MainContainer() {
   return (
@@ -18,6 +19,7 @@ export function MainContainer() {
         <Hero />
         <LatestProjects />
         <Footer />
+        <Top />
       </Box>
     </Box>
   );
