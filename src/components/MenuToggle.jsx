@@ -7,8 +7,9 @@ import {
 } from "framer-motion";
 
 import { Box } from "@mui/system";
+import { HamburgerToggle } from "./HamburgerToggle";
 
-export function Top() {
+export function MenuToggle() {
   const { scrollY } = useScroll();
   const [showScroll, setShowScroll] = useState(false);
 
@@ -27,8 +28,8 @@ export function Top() {
   return (
     <Box
       sx={{
-        display: "block",
-        bottom: 0,
+        display: { xs: "none", sm: "block" },
+        top: 0,
         left: 0,
         right: 0,
         width: "100%",
@@ -50,8 +51,6 @@ export function Top() {
           <Box
             sx={{
               position: "relative",
-              width: { xs: "5rem", md: "6.25rem" },
-              height: { xs: "5rem", md: "6.25rem" },
               marginRight: { xs: "1rem", md: "2rem" },
             }}
           >
@@ -62,32 +61,19 @@ export function Top() {
                 <motion.div
                   style={{
                     position: "relative",
-                    background: "#000",
-                    color: "white",
-                    padding: "10px",
-                    borderRadius: "50%",
+                    top: "1.5rem",
                     cursor: "pointer",
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
                   }}
                   key="scroll-to-top"
-                  initial={{ bottom: -100, opacity: 0 }}
-                  animate={{ bottom: 40, opacity: 1 }}
+                  initial={{ right: -100, opacity: 0 }}
+                  animate={{ right: 0, opacity: 1 }}
                   exit={{
-                    bottom: -100,
+                    right: -100,
                     opacity: 0,
                     transition: { duration: 0.6, ease: "backIn" },
                   }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  }
                 >
-                  <p className="body1">top</p>
+                  <HamburgerToggle />
                 </motion.div>
               )}{" "}
             </AnimatePresence>

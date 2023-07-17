@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 import { LatestProjects } from "./LatestProjects";
 import { Footer } from "./Footer";
 import { Top } from "./Top";
+import { MenuToggle } from "./MenuToggle";
 
 export function MainContainer() {
   return (
@@ -19,6 +20,7 @@ export function MainContainer() {
         <Hero />
         <LatestProjects />
         <Footer />
+        <MenuToggle />
         <Top />
       </Box>
     </Box>
