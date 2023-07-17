@@ -15,7 +15,7 @@ export function Hero() {
         transition: {
           pathLength: { delay, type: "spring", duration: 4, bounce: 0 },
           opacity: { delay, duration: 0.5 },
-          y: { delay, type: "spring", duration: 2, bounce: 0.5 },
+          y: { delay, type: "spring", duration: 3, bounce: 0.7 },
         },
       };
     },
@@ -181,7 +181,13 @@ export function Hero() {
         >
           <div></div>
           <div>
-            <p className="body1">Austin, Texas</p>
+            <Box
+              component="p"
+              className="body1"
+              sx={{ paddingBottom: { xs: ".3rem", lg: "0" } }}
+            >
+              Austin, Texas
+            </Box>
           </div>
         </Box>
         <Box>

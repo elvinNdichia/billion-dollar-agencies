@@ -69,6 +69,20 @@ body {
   font-weight: 800;
   line-height: 0.9;
 }
+.h3-projects {
+  font-size: calc(25px + (2000vw - 10000px) / 1900);
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  line-height: 1.2;
+}
+.item-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #94999e;
+  line-height: 1.2;
+  margin-bottom: 0.3125rem;
+}
+
 @media screen and (min-width: 768px) {
   .body1 {
     font-size: 1.1rem;
