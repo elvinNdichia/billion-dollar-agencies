@@ -1,5 +1,5 @@
 {
-  "name": "one-billion-agencies",
+  "name": "elvin-voila",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,7 +20,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
     "react-use": "^17.4.0",
-    "smooth-scrollbar": "^8.8.4"
+    "smooth-scrollbar": "^8.8.4",
+    "smooth-scrollbar-react": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
