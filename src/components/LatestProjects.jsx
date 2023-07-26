@@ -61,7 +61,7 @@ function ExpandingProject({ title, src }) {
   const width = useTransform(
     scrollYProgress,
     [0, 1],
-    [title === "Daml" ? "40%" : "65%", "65%"]
+    [title === "Daml" ? "40%" : "60%", "60%"]
   );
   return (
     <Box sx={{ display: "flex", marginBottom: "56px", cursor: "pointer" }}>
