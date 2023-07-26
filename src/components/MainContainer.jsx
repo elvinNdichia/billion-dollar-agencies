@@ -6,6 +6,7 @@ import { Footer } from "./Footer";
 import { Top } from "./Top";
 import { MenuToggle } from "./MenuToggle";
 import { Menu } from "./HamburgerToggle";
+import CursorCircle from "./gpt/CursorCircle";
 
 export function MainContainer() {
   return (
@@ -17,6 +18,7 @@ export function MainContainer() {
           padding: { sm: "0 2rem" },
         }}
       >
+        <CursorCircle />
         <Header />
         <Hero />
         <LatestProjects />
