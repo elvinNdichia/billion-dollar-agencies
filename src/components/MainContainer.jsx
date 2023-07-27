@@ -8,6 +8,7 @@ import { MenuToggle } from "./MenuToggle";
 import { Menu } from "./HamburgerToggle";
 import CursorCircle from "./gpt/CursorCircle";
 import { LNCursor } from "./gpt/LNCursor";
+import { PopMenu } from "./PopMenu";
 
 export function MainContainer() {
   return (
@@ -22,6 +23,7 @@ export function MainContainer() {
         <Box sx={{ display: { xs: "none", lg: "block" } }}>
           <LNCursor />
         </Box>
+
         <Header />
         <Hero />
         <LatestProjects />
@@ -30,6 +32,7 @@ export function MainContainer() {
         <Menu />
         <MenuToggle />
       </Box>
+      <PopMenu />
     </Box>
   );
 }
