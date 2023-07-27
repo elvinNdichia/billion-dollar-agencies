@@ -81,7 +81,22 @@ export function Top() {
                     opacity: 0,
                     transition: { duration: 0.6, ease: "backIn" },
                   }}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 360,
+                    transition: {
+                      scale: {
+                        duration: 0.2,
+                        type: "spring",
+                        damping: 5,
+                        stiffness: 100,
+                      },
+                      rotate: {
+                        duration: 0.4,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "smooth" })
