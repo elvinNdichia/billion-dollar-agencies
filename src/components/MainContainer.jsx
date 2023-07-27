@@ -7,6 +7,7 @@ import { Top } from "./Top";
 import { MenuToggle } from "./MenuToggle";
 import { Menu } from "./HamburgerToggle";
 import CursorCircle from "./gpt/CursorCircle";
+import { LNCursor } from "./gpt/LNCursor";
 
 export function MainContainer() {
   return (
@@ -18,6 +19,7 @@ export function MainContainer() {
           padding: { sm: "0 2rem" },
         }}
       >
+        <LNCursor />
         <CursorCircle />
         <Header />
         <Hero />

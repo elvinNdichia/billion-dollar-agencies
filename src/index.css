@@ -110,3 +110,69 @@ body {
     /* Adjust other properties as needed */
   }
 }
+
+/* For LN cursor */
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  transition: 100ms ease-out;
+  will-change: width, height, transform, border;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .ring {
+    display: none;
+  }
+}
+
+.ring.hovered {
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+  background-color: rgba(50, 50, 50, 0.5);
+  border: none;
+}
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: blue;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .dot {
+    display: none;
+  }
+}
+
+.dot.hovered {
+  display: none;
+}
+
+body.dark .ring {
+  border-color: white;
+}
+
+body.dark .ring.hovered {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark .dot {
+  background-color: white;
+}

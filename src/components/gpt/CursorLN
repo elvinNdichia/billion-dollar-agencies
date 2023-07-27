@@ -1,0 +1,68 @@
+import React, { createContext, useContext, useEffect, useState } from "react";
+
+const MouseContext = createContext({
+  cursorType: "",
+  cursorChangeHandler: (cursorType: string) => {},
+});
+
+const useMousePosition = () => {
+  const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+
+  useEffect(() => {
+    const mouseMoveHandler = (event: MouseEvent) => {
+      const { clientX, clientY } = event;
+      setMousePosition({
+        x: clientX,
+        y: clientY,
+      });
+    };
+
+    document.addEventListener("mousemove", mouseMoveHandler);
+
+    return () => {
+      document.removeEventListener("mousemove", mouseMoveHandler);
+    };
+  }, []);
+
+  return mousePosition;
+};
+
+const MouseContextProviderAndCursor = ({ children }) => {
+  const [cursorType, setCursorType] = useState("");
+  const cursorChangeHandler = (cursorType: string) => {
+    setCursorType(cursorType);
+  };
+  const { x, y } = useMousePosition();
+
+  useEffect(() => {
+    if (!(navigator.userAgent.indexOf("Chrome") !== -1)) {
+      const dot = document.querySelector(".dot");
+      const ring = document.querySelector(".ring");
+
+      if (dot && ring) {
+        ring.style.display = "none";
+      }
+    }
+  }, [cursorType]);
+
+  return (
+    <MouseContext.Provider
+      value={{
+        cursorType,
+        cursorChangeHandler,
+      }}
+    >
+      {children}
+      <div
+        className={`dot ${cursorType}`}
+        style={{ left: `${x}px`, top: `${y}px` }}
+      ></div>
+      <div
+        className={`ring ${cursorType}`}
+        style={{ left: `${x}px`, top: `${y}px` }}
+      ></div>
+    </MouseContext.Provider>
+  );
+};
+
+export { MouseContext, MouseContextProviderAndCursor };
