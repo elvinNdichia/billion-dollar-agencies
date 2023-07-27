@@ -20,7 +20,6 @@ export function MainContainer() {
         }}
       >
         <LNCursor />
-        <CursorCircle />
         <Header />
         <Hero />
         <LatestProjects />
