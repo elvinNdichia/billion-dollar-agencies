@@ -19,7 +19,9 @@ export function MainContainer() {
           padding: { sm: "0 2rem" },
         }}
       >
-        <LNCursor />
+        <Box sx={{ display: { xs: "none", lg: "block" } }}>
+          <LNCursor />
+        </Box>
         <Header />
         <Hero />
         <LatestProjects />
