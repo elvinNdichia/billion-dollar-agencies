@@ -32,7 +32,6 @@ export function MainContainer() {
         <Menu />
         <MenuToggle />
       </Box>
-      <PopMenu />
     </Box>
   );
 }
