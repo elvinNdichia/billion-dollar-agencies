@@ -10,6 +10,7 @@ import { IntermediateParallax, SimpleParallax } from "./components/Parallax";
 import { AdvancedParallaxGPt } from "./components/AdvancedParallaxGPt";
 import { NavAndTop } from "./components/NavAndTop";
 import { MainContainer } from "./components/MainContainer";
+import { MainContainerWithLenis } from "./components/MainContainerWithLenis";
 
 function App() {
   return (
